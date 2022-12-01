@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">estudiante</string>
+    <string name="titulo1">INSTITUCIÓN EDUCATIVA</string>
+    <string name="nombre1">"SAN CARLOS"</string>
+    <string name="frase1">"¡INICIAMOS UN NUEVO AÑO!</string>
+    <string name="estudiante">"¡BIENVENIDO ESTUDIANTE!</string>
+
+    <string name="inicio1">INICIO DE SESIÓN ESTUDIANTE</string>
+    <string name="usuario1">NOMBRE DE USUARIO:</string>
+    <string name="contra1">CONTRASEÑA:</string>
+    <string name="btnIniEst">INICIAR SESIÓN</string>
+
+
+</resources>

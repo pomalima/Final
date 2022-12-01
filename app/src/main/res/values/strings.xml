@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FinalPomalima</string>
+    <string name="titulo">INSTITUCIÓN EDUCATIVA</string>
+    <string name="nombre">"SAN CARLOS"</string>
+    <string name="frase">¡INICIAMOS UN NUEVO AÑO!</string>
+    <string name="docente">¡BIENVENIDO DOCENTE!</string>
+
+    <string name="inicio">INICIO DE SESIÓN DOCENTE</string>
+    <string name="usuario">NOMBRE DE USUARIO:</string>
+    <string name="contra">CONTRASEÑA:</string>
+    <string name="btnIniDoc">INICIAR SESIÓN</string>
+</resources>
