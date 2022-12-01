@@ -9,4 +9,7 @@
     <string name="usuario">NOMBRE DE USUARIO:</string>
     <string name="contra">CONTRASEÑA:</string>
     <string name="btnIniDoc">INICIAR SESIÓN</string>
+    <string name="txtinicio">REGISTRO DE NOTAS</string>
+    <string name="btngrados">GRADOS</string>
+
 </resources>

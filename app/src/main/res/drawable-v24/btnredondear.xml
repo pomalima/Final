@@ -9,7 +9,7 @@
 
     </gradient>
     <corners
-        android:radius="100px"
+        android:radius="70px"
         >
 
     </corners>
