@@ -10,6 +10,13 @@
     <string name="contra">CONTRASEÑA:</string>
     <string name="btnIniDoc">INICIAR SESIÓN</string>
     <string name="txtinicio">REGISTRO DE NOTAS</string>
-    <string name="btngrados">GRADOS</string>
+    <string name="grados">GRADOS</string>
+
+    <string name="grado1">1° SECUNDARIA</string>
+    <string name="grado2">2° SECUNDARIA</string>
+    <string name="grado3">3° SECUNDARIA</string>
+    <string name="grado4">4° SECUNDARIA</string>
+    <string name="grado5">5° SECUNDARIA</string>
+
 
 </resources>
