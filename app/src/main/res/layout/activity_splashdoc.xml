@@ -48,20 +48,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/titulo"
                 android:textColor="@color/white"
-                android:textSize="28sp"
+                android:textSize="35sp"
                 android:textStyle="bold"
                 android:layout_margin="15dp"
                 ></TextView>
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="50sp"
-                android:text="@string/nombre"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:textStyle="bold"></TextView>
 
         </LinearLayout>
 
@@ -73,15 +65,7 @@
             android:layout_weight="9"
             >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="@string/frase"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                android:textStyle="bold"></TextView>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -91,7 +75,7 @@
                 android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:textSize="30dp"
                 ></TextView>
 
 

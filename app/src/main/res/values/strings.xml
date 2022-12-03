@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">FinalPomalima</string>
-    <string name="titulo">INSTITUCIÓN EDUCATIVA</string>
-    <string name="nombre">"SAN CARLOS"</string>
+    <string name="titulo">REGISTRO DE NOTAS</string>
     <string name="frase">¡INICIAMOS UN NUEVO AÑO!</string>
     <string name="docente">¡BIENVENIDO DOCENTE!</string>
 
@@ -9,14 +8,16 @@
     <string name="usuario">NOMBRE DE USUARIO:</string>
     <string name="contra">CONTRASEÑA:</string>
     <string name="btnIniDoc">INICIAR SESIÓN</string>
-    <string name="txtinicio">REGISTRO DE NOTAS</string>
-    <string name="grados">GRADOS</string>
+    <string name="txtinicio">MENÚ PRINCIPAL</string>
+    <string name="materia">REGISTRO DE MATERIA</string>
+    <string name="lismateria">LISTAR MATERIA</string>
 
-    <string name="grado1">1° SECUNDARIA</string>
-    <string name="grado2">2° SECUNDARIA</string>
-    <string name="grado3">3° SECUNDARIA</string>
-    <string name="grado4">4° SECUNDARIA</string>
-    <string name="grado5">5° SECUNDARIA</string>
+    <string name="txtregistro">REGISTRAR MATERIA</string>
+    <string name="nombreMateria">MATERIA:</string>
+    <string name="nrc">NRC: </string>
+
+    <string name="registrar">REGISTRAR</string>
+    <string name="cancelar">CANCELAR</string>
 
 
 </resources>
