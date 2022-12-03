@@ -15,7 +15,7 @@
 
     <LinearLayout
         android:layout_width="320dp"
-        android:layout_height="530dp"
+        android:layout_height="608dp"
         android:layout_gravity="center"
         android:background="@color/white"
         android:gravity="top|center"
@@ -28,51 +28,57 @@
             android:layout_gravity="center"
             android:layout_margin="35dp"
             android:gravity="center"
-            android:text="@string/txtsubir"
+            android:text="@string/txtNota"
             android:textColor="@color/black"
             android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:text="@string/txtNota1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             android:textStyle="bold"
             />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"></EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:text="@string/txtObservacion"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"></EditText>
+
         <Button
-            android:id="@+id/btnSubir"
-            android:layout_width="210dp"
+            android:id="@+id/btnAñadirNot"
+            android:layout_width="219dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:background="@drawable/btnredondear"
-            android:text="@string/btnArchivo"
-            android:textSize="20sp"
-            android:textStyle="bold"
-
-            />
-
-        <TextView
-            android:id="@+id/archivo"
-            android:layout_width="250dp"
-            android:layout_height="45dp"
-            android:layout_margin="50dp"
-            />
+            android:text="@string/btnAñadir"
+            android:textSize="20sp" />
 
         <Button
-            android:id="@+id/btnGuardarSuLista"
-            android:layout_width="210dp"
+            android:id="@+id/btnRegresarNot"
+            android:layout_width="219dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:background="@drawable/btnredondear"
-            android:text="@string/btnGuardar"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btnCancelarSuLista"
-            android:layout_width="210dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/btnredondear"
-            android:text="@string/cancelar"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
+            android:text="@string/btnRegresar"
+            android:textSize="20sp" />
 
     </LinearLayout>
 </FrameLayout>

@@ -15,7 +15,7 @@
 
     <LinearLayout
         android:layout_width="320dp"
-        android:layout_height="530dp"
+        android:layout_height="616dp"
         android:layout_gravity="center"
         android:background="@color/white"
         android:gravity="top|center"
@@ -28,50 +28,44 @@
             android:layout_gravity="center"
             android:layout_margin="35dp"
             android:gravity="center"
-            android:text="@string/txtsubir"
+            android:text="@string/txtRegNotas"
             android:textColor="@color/black"
             android:textSize="25sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:text="@string/txtMotivo"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"></EditText>
+
 
         <Button
-            android:id="@+id/btnSubir"
-            android:layout_width="210dp"
+            android:id="@+id/btnAñadirNota"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:background="@drawable/btnredondear"
-            android:text="@string/btnArchivo"
+            android:text="@string/btnAñadir"
             android:textSize="20sp"
-            android:textStyle="bold"
+            android:layout_gravity="right"/>
 
-            />
-
-        <TextView
-            android:id="@+id/archivo"
-            android:layout_width="250dp"
-            android:layout_height="45dp"
-            android:layout_margin="50dp"
-            />
 
         <Button
-            android:id="@+id/btnGuardarSuLista"
-            android:layout_width="210dp"
+            android:id="@+id/btnViasualizarList"
+            android:layout_width="296dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="120dp"
             android:background="@drawable/btnredondear"
-            android:text="@string/btnGuardar"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btnCancelarSuLista"
-            android:layout_width="210dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/btnredondear"
-            android:text="@string/cancelar"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:text="@string/btnVisualizarList"
+            android:textSize="20sp" />
 
 
     </LinearLayout>

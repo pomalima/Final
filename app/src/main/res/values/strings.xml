@@ -19,5 +19,22 @@
     <string name="registrar">REGISTRAR</string>
     <string name="cancelar">CANCELAR</string>
 
+    <string name="txtsubir">SUBIR LISTA</string>
+    <string name="btnArchivo">SUBIR ARCHIVO</string>
+    <string name="btnGuardar">GUARDAR</string>
+    <string name="txtListaMateria">LISTA DE MATERIAS</string>
+
+    <string name="txtRegNotas">REGISTRAR NOTAS</string>
+    <string name="txtMotivo">MOTIVO:</string>
+    <string name="btnAñadir">AÑADIR</string>
+    <string name="btnRegresar">AÑADIR</string>
+    <string name="btnVisualizarList">VISUALIZAR LISTA</string>
+
+    <string name="txtListEstudiante">LISTA DE ESTUDIANTES</string>
+    <string name="txtListNotas">LISTA DE NOTAS</string>
+    <string name="txtNota">NOTA</string>
+    <string name="txtNota1">NOTA:</string>
+    <string name="txtObservacion">OBSERVACIÓN:</string>
+
 
 </resources>

@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalPomalima">
-        <activity android:name=".IngresarLista"></activity>
+        <activity android:name=".Nota"></activity>
+        <activity android:name=".ListaNotas" />
+        <activity android:name=".ListaEstudiante" />
+        <activity android:name=".RegistrarNotas" />
+        <activity android:name=".ListaMateria" />
+        <activity android:name=".IngresarLista" />
         <activity android:name=".RegistroMateria" />
         <activity android:name=".Logindoc" />
         <activity

@@ -5,21 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ListaMateria">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txtMaterias"
+        android:text="@string/txtListaMateria"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textSize="20sp"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_margin="20dp"
-        android:textSize="25dp"/>
+        android:textColor="@color/black"
+        />
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 </LinearLayout>
