@@ -29,6 +29,7 @@
     <string name="btnAñadir">AÑADIR</string>
     <string name="btnRegresar">AÑADIR</string>
     <string name="btnVisualizarList">VISUALIZAR LISTA</string>
+    <string name="btnVolver">VOLVER</string>
 
     <string name="txtListEstudiante">LISTA DE ESTUDIANTES</string>
     <string name="txtListNotas">LISTA DE NOTAS</string>
