@@ -5,7 +5,7 @@
     <string name="docente">¡BIENVENIDO DOCENTE!</string>
 
     <string name="inicio">INICIO DE SESIÓN DOCENTE</string>
-    <string name="usuario">NOMBRE DE USUARIO:</string>
+    <string name="usuario">INGRESA CORREO:</string>
     <string name="contra">CONTRASEÑA:</string>
     <string name="btnIniDoc">INICIAR SESIÓN</string>
     <string name="txtinicio">MENÚ PRINCIPAL</string>
@@ -34,7 +34,14 @@
     <string name="txtListNotas">LISTA DE NOTAS</string>
     <string name="txtNota">NOTA</string>
     <string name="txtNota1">NOTA:</string>
+    <string name="cerrar">CERRAR SESION</string>
     <string name="txtObservacion">OBSERVACIÓN:</string>
+
+    <string name="invalid_email">Ingrese email valido</string>
+    <string name="invalid_pass">Ingrese el password mayor a 6 digitos</string>
+
+
+
 
 
 </resources>

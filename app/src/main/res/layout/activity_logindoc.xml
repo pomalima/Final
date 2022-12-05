@@ -42,9 +42,11 @@
             android:textSize="18sp" />
 
         <EditText
+            android:id="@+id/edtEmailDoc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"></EditText>
+            android:layout_margin="20dp"
+            ></EditText>
 
         <TextView
             android:layout_width="match_parent"
@@ -55,12 +57,15 @@
             android:textSize="18sp" />
 
         <EditText
+            android:id="@+id/edtPassDoc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"></EditText>
+            android:ems="10"
+            android:inputType="textPassword"
+            android:layout_margin="20dp"/>
 
         <Button
-            android:id="@+id/btnDocente"
+            android:id="@+id/btnDocLogin"
             android:layout_width="296dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
