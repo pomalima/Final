@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -62,23 +63,33 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"></EditText>
 
-        <Button
-            android:id="@+id/btnAñadirNot"
-            android:layout_width="219dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="@drawable/btnredondear"
-            android:text="@string/btnAñadir"
-            android:textSize="20sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
 
-        <Button
-            android:id="@+id/btnRegresarNot"
-            android:layout_width="219dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="@drawable/btnredondear"
-            android:text="@string/btnRegresar"
-            android:textSize="20sp" />
+            <Button
+                android:id="@+id/btnAñadirNot"
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#23C0CD"
+                android:text="@string/btnAñadir"
+                android:textSize="20sp"
+                app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/btnRegresarNot"
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#23C0CD"
+                android:text="@string/btnRegresar"
+                android:textSize="20sp"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
 
     </LinearLayout>
 </FrameLayout>

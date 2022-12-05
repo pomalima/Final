@@ -27,7 +27,7 @@
     <string name="txtRegNotas">REGISTRAR NOTAS</string>
     <string name="txtMotivo">MOTIVO:</string>
     <string name="btnAñadir">AÑADIR</string>
-    <string name="btnRegresar">AÑADIR</string>
+    <string name="btnRegresar">REGRESAR</string>
     <string name="btnVisualizarList">VISUALIZAR LISTA</string>
     <string name="btnVolver">VOLVER</string>
 

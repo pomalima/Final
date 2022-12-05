@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,19 +7,52 @@
     android:orientation="vertical"
     tools:context=".ListaNotas">
 
-    <TextView
-        android:id="@+id/textView3"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txtListNotas"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:layout_margin="20dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/txtListNotas"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_margin="20dp"/>
+
+            <Button
+                android:id="@+id/btnVolverListMateria"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnredondear"
+                android:gravity="center"
+                android:text="@string/btnVolver"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
+
