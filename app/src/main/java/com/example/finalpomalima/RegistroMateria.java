@@ -18,10 +18,8 @@ import Entidades.Materia;
 
 public class RegistroMateria extends AppCompatActivity {
 
-    EditText edtRegMateria, edtRegNrc;
-    Button btnCancelarReg, btnRegistrarMat;
-
-    //private FirebaseFirestore mfirestore;
+    EditText edtRegMateria_RegMat, edtRegNrc_RegMat;
+    Button btnCancelarReg_RegMat, btnRegistrarMat_RegMat;
 
     private DatabaseReference mDatabase;
     private FirebaseDatabase firebaseDatabase;
@@ -31,22 +29,25 @@ public class RegistroMateria extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_materia);
 
-       
-
-
-        //mfirestore = FirebaseFirestore.getInstance();
-        inciarFirebase();
+        //Para a la conexión
+        FirebaseApp.initializeApp(this);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        mDatabase = firebaseDatabase.getReference();
         mDatabase= FirebaseDatabase.getInstance().getReference();
-        edtRegMateria= findViewById(R.id.edtRegMateria);
-        edtRegNrc = findViewById(R.id.edtRegNrc);
-        btnRegistrarMat = findViewById(R.id.btnRegMateria);
 
-        btnRegistrarMat.setOnClickListener(new View.OnClickListener() {
+        edtRegMateria_RegMat = findViewById(R.id.edtRegMateria_RegMat);
+        edtRegNrc_RegMat = findViewById(R.id.edtRegNrc_RegMat);
+        btnRegistrarMat_RegMat = findViewById(R.id.btnRegistrarMat_RegMat);
+        btnCancelarReg_RegMat = findViewById(R.id.btnCancelarMat_RegMat);
+
+        btnRegistrarMat_RegMat.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { registrar(); }
+            public void onClick(View view) {
+                registrar();
+            }
         });
-        btnCancelarReg = findViewById(R.id.btnCancelarMat);
-        btnCancelarReg.setOnClickListener(new View.OnClickListener() {
+
+        btnCancelarReg_RegMat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(RegistroMateria.this, MainActivity.class);
@@ -56,27 +57,17 @@ public class RegistroMateria extends AppCompatActivity {
     }
 
     private void registrar() {
-        String regmateria = edtRegMateria.getText().toString();
-        String rnc = edtRegNrc.getText().toString();
+        Materia materia = new Materia();
+        String regmateria = edtRegMateria_RegMat.getText().toString();
+        String nrc = edtRegNrc_RegMat.getText().toString();
         String id= mDatabase.push().getKey();
-        Materia materia = new Materia(id,regmateria,rnc);
 
         materia.setId(id);
+        materia.setRegmateria(regmateria);
+        materia.setNrc(nrc);
         mDatabase.child("Materia").child(id).setValue(materia);
         Toast.makeText(this, "Registro Exito", Toast.LENGTH_SHORT).show();
-    }
-
-    //Para a la conexión
-    private void inciarFirebase() {
-        FirebaseApp.initializeApp(this);
-        FirebaseDatabase db = FirebaseDatabase.getInstance();
-        firebaseDatabase= FirebaseDatabase.getInstance();
-        mDatabase = firebaseDatabase.getReference();
 
     }
 
-    // private void materiaregistrada(String materia, String nrc) {
-
-    //mfirestore.collection("cursos").add(map)
-   // }
 }

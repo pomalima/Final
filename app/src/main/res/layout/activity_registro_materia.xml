@@ -44,7 +44,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edtRegMateria"
+            android:id="@+id/edtRegMateria_RegMat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"></EditText>
@@ -59,7 +59,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edtRegNrc"
+            android:id="@+id/edtRegNrc_RegMat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"></EditText>
@@ -73,7 +73,7 @@
             >
 
             <Button
-                android:id="@+id/btnRegistrarMat"
+                android:id="@+id/btnRegistrarMat_RegMat"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -83,7 +83,7 @@
                 app:cornerRadius="20dp" />
 
             <Button
-                android:id="@+id/btnCancelarMat"
+                android:id="@+id/btnCancelarMat_RegMat"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"

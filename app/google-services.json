@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "168004988719",
+    "firebase_url": "https://institucionsancarlosrpb-default-rtdb.firebaseio.com",
+    "project_id": "institucionsancarlosrpb",
+    "storage_bucket": "institucionsancarlosrpb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168004988719:android:5f32f7d6268bb60c017bda",
+        "android_client_info": {
+          "package_name": "com.example.estudiante"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168004988719-vs4m0b14h5d9vdnqruio8id6q9tlddch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEUKHt3YUOUe8sbtnQUBE_kWj5QZ3ZST4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168004988719-vs4m0b14h5d9vdnqruio8id6q9tlddch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168004988719:android:7bb90c9ff7217169017bda",
+        "android_client_info": {
+          "package_name": "com.example.finalpomalima"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168004988719-vs4m0b14h5d9vdnqruio8id6q9tlddch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEUKHt3YUOUe8sbtnQUBE_kWj5QZ3ZST4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168004988719-vs4m0b14h5d9vdnqruio8id6q9tlddch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

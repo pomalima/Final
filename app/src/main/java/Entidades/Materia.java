@@ -6,6 +6,9 @@ public class Materia {
     private String regmateria;
     private String nrc;
 
+    public Materia() {
+    }
+
     public Materia(String id, String regmateria, String nrc) {
         this.id = id;
         this.regmateria = regmateria;
