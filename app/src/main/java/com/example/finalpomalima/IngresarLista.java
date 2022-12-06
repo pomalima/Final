@@ -47,8 +47,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Iterator;
 
+import Entidades.Alumno;
 import Entidades.Materia;
 
 public class IngresarLista extends AppCompatActivity {
@@ -59,6 +61,9 @@ public class IngresarLista extends AppCompatActivity {
     private DatabaseReference mDatabase;
     public  static final int READ_REQUEST_CODE = 42;
     public  static final int PERMISSION_REQUEST_STORAGE = 1000;
+
+    ArrayList<Alumno> list_alumnos;
+    public static Alumno item_alumno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,10 +88,15 @@ public class IngresarLista extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
+        list_alumnos = new ArrayList<>();
+        list_alumnos.clear();
 
         btnSubirLista_IngList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                archivo_IngList.setText("");
+                list_alumnos = new ArrayList<>();
+                list_alumnos.clear();
                 seleccionar_excel();
             }
         });
@@ -94,19 +104,27 @@ public class IngresarLista extends AppCompatActivity {
         btnGuardarSuLista_IngList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String correo = preferencias.getString("CodigoDocente", "");
-                String nrc = preferencias.getString("nrc", "");
+                if(list_alumnos.isEmpty() || list_alumnos == null){
+                    Toast.makeText(IngresarLista.this, getText(R.string.elegir_archivo), Toast.LENGTH_SHORT).show();
+                }else{
+                    String correo = preferencias.getString("CodigoDocente", "");
+                    String nrc = preferencias.getString("nrc", "");
 
-                Materia materia = new Materia();
-                materia.setNombre_materia(preferencias.getString("nombre_materia", ""));
-                materia.setNrc(nrc);
+                    Materia materia = new Materia();
+                    materia.setNombre_materia(preferencias.getString("nombre_materia", ""));
+                    materia.setNrc(nrc);
 
-                mDatabase.child(correo).child(nrc).setValue(materia);
-                Toast.makeText(IngresarLista.this, getText(R.string.registro_exitoso), Toast.LENGTH_SHORT).show();
+                    mDatabase.child(correo).child(nrc).setValue(materia);
 
-                Intent i = new Intent(IngresarLista.this, MainActivity.class);
-                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(i);
+                    for (Alumno subirAlumno : list_alumnos) {
+                        mDatabase.child(correo).child(nrc).child("alumnos").child(subirAlumno.getDni()).setValue(subirAlumno);
+                    }
+                    Toast.makeText(IngresarLista.this, getText(R.string.registro_exitoso), Toast.LENGTH_SHORT).show();
+
+                    Intent i = new Intent(IngresarLista.this, MainActivity.class);
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(i);
+                }
             }
         });
 
@@ -127,6 +145,9 @@ public class IngresarLista extends AppCompatActivity {
         String datos = "";
 
         try {
+            list_alumnos = new ArrayList<>();
+            list_alumnos.clear();
+
             inputStream = new FileInputStream(this.getContentResolver().openFileDescriptor(uri, "r").getFileDescriptor());
 
             POIFSFileSystem fileSystem = new POIFSFileSystem(inputStream);
@@ -136,19 +157,50 @@ public class IngresarLista extends AppCompatActivity {
             HSSFSheet sheet = workbook.getSheetAt(0);
             Iterator<Row> rowIterator = sheet.rowIterator();
 
+            boolean excepcion_primera_fila = false;
             while (rowIterator.hasNext()) {
                 HSSFRow row = (HSSFRow) rowIterator.next();
                 Iterator<Cell> cellIterator = row.cellIterator();
+
+                item_alumno = new Alumno();
+                int i=0;
                 while (cellIterator.hasNext()) {
                     HSSFCell cell = (HSSFCell) cellIterator.next();
 
-                    datos = datos+" - "+cell.toString();
+//                    datos = datos+" - "+cell.toString();
+                    if(i==0){
 
+                        String dni_entero="";
+
+                        String[] dniparts_01 = cell.toString().split("E");
+                        String dnipart_01 = dniparts_01[0];
+
+                        if(dnipart_01.equals("DNI")){
+                            datos = datos+" - "+cell.toString();
+                            dni_entero=cell.toString();
+                        }
+                        else{
+                            String[] dniparts_02 = dnipart_01.split("\\.");
+                            String dnipart_02_01 = dniparts_02[0];
+                            String dnipart_02_02 = dniparts_02[1];
+
+                            dni_entero = dnipart_02_01 + dnipart_02_02;
+                            datos = datos+" - "+dni_entero;
+                        }
+                        item_alumno.setDni(dni_entero);
+
+                    }
+                    else if(i==1) item_alumno.setNombre(cell.toString());
+                    i++;
                 }
+                if(excepcion_primera_fila) list_alumnos.add(item_alumno);
+                excepcion_primera_fila = true;
                 datos = datos+"\n";
+//                archivo_IngList.setText(item_alumno.getDni().toString());
             }
 
             archivo_IngList.setText(datos);
+//            archivo_IngList.setText(list_alumnos.toString());
 
         } catch (Exception e) {
                 e.printStackTrace();
