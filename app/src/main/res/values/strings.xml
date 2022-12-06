@@ -36,6 +36,8 @@
     <string name="txtListNotas">LISTA DE NOTAS</string>
     <string name="txtNota">NOTA</string>
     <string name="txtNota1">NOTA:</string>
+    <string name="txtdnialumno">DNI:</string>
+    <string name="txtnombrealumno">NOMBRE:</string>
     <string name="cerrar">CERRAR SESION</string>
     <string name="txtObservacion">OBSERVACIÓN:</string>
 
@@ -52,5 +54,6 @@
     <string name="permiso_no_accedido">Permiso NO ACCEDIDO!</string>
 
     <string name="elegir_archivo">Elije un archivo!</string>
+    <string name="sin_materias">No tiene Materias Registradas!</string>
 
 </resources>
