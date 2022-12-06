@@ -43,13 +43,14 @@
             android:textSize="18sp" />
 
         <EditText
+            android:id="@+id/edtMotivo_RegNotas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"></EditText>
 
 
         <Button
-            android:id="@+id/btnAñadirNota"
+            android:id="@+id/btnAñadir_RegNota"
             android:layout_width="157dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -61,7 +62,7 @@
 
 
         <Button
-            android:id="@+id/btnViasualizarList"
+            android:id="@+id/btnViasualizarList_RegNotas"
             android:layout_width="296dp"
             android:layout_height="wrap_content"
             android:layout_margin="120dp"

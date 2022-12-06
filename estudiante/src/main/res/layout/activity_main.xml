@@ -12,12 +12,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <TextView
+        <TextView
                 android:layout_width="158dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -28,29 +24,17 @@
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btnVolverListMateria"
-                android:layout_width="166dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/btnredondear"
-                android:gravity="center"
-                android:text="@string/btnVolver"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ListView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerView_listMatEst"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
         </LinearLayout>
     </LinearLayout>
 

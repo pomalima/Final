@@ -31,7 +31,7 @@
                 />
 
             <Button
-                android:id="@+id/btnVolverListMateria"
+                android:id="@+id/btnVolver_ListNotaMotivo"
                 android:layout_width="166dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -50,9 +50,11 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ListView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerView_listNotMotivoEst"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
         </LinearLayout>
     </LinearLayout>
 

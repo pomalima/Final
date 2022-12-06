@@ -30,7 +30,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btnVolverListMateria"
+                android:id="@+id/btnVolver_ListMateria"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -48,7 +48,8 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ListView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerView_ListMateria"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>

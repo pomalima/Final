@@ -45,10 +45,13 @@
             />
 
         <EditText
-            android:id="@+id/edtNota"
+            android:id="@+id/edtNota_Nota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"></EditText>
+            android:layout_margin="20dp"
+            android:inputType="number"
+            ></EditText>
+
 
         <TextView
             android:layout_width="match_parent"
@@ -60,7 +63,7 @@
             android:textStyle="bold"/>
 
         <EditText
-            android:id="@+id/edtObservacion"
+            android:id="@+id/edtObservacion_Nota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"></EditText>
@@ -73,7 +76,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/btnAñadirNot"
+                android:id="@+id/btnAñadir_Nota"
                 android:layout_width="176dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -83,7 +86,7 @@
                 app:cornerRadius="20dp" />
 
             <Button
-                android:id="@+id/btnRegresarNot"
+                android:id="@+id/btnRegresar_Nota"
                 android:layout_width="176dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
