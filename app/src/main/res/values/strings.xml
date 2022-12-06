@@ -42,7 +42,9 @@
     <string name="invalid_pass">Ingrese el password mayor a 6 digitos</string>
 
 
-
-
+    //REGISTRO TIENDA
+    <string name="rellene_los_campos">Rellene los campos</string>
+    <string name="registro_exitoso">Registro Exito</string>
+    <string name="existe_nrc">Ya existe el NRC</string>
 
 </resources>

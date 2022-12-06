@@ -3,7 +3,9 @@ package com.example.finalpomalima;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -85,11 +87,22 @@ public class Logindoc extends AppCompatActivity {
     }
 
     private void irPrincipal() {
+        SharedPreferences preferencias = getSharedPreferences("Global", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferencias.edit();
+
+        if(edtEmailDoc.getText().toString().equals(""));
+        else{
+//        editor.clear().apply();
+            String[] idparts = edtEmailDoc.getText().toString().split("\\@");
+            String correo_id = idparts[0]; // id_unico
+            editor.putString("CodigoDocente", correo_id);
+            editor.commit();
+        }
+
         Intent i = new Intent(this,MainActivity.class);
-        i.putExtra("mail",edtEmailDoc.getText().toString());
+//        i.putExtra("mail",edtEmailDoc.getText().toString());
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(i);
-
     }
 
     private void ToastError(String error) {

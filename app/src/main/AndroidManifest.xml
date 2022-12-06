@@ -12,24 +12,52 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalPomalima">
-        <activity android:name=".Nota"></activity>
-        <activity android:name=".ListaNotas" />
-        <activity android:name=".ListaEstudiante" />
-        <activity android:name=".RegistrarNotas" />
-        <activity android:name=".ListaMateria" />
-        <activity android:name=".IngresarLista" />
-        <activity android:name=".RegistroMateria" />
-        <activity android:name=".Logindoc" />
         <activity
             android:name=".Splashdoc"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.FinalPomalima.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Nota"
+            android:exported="true"
+            android:theme="@style/Theme.FinalPomalima.NoActionBar"/>
+        <activity
+            android:name=".ListaNotas"
+            android:exported="true"
+            android:theme="@style/Theme.FinalPomalima.NoActionBar"/>
+        <activity
+            android:name=".ListaEstudiante"
+            android:exported="true"
+            android:theme="@style/Theme.FinalPomalima.NoActionBar"/>
+        <activity
+            android:name=".RegistrarNotas"
+            android:exported="true"
+            android:theme="@style/Theme.FinalPomalima.NoActionBar"/>
+        <activity
+            android:name=".ListaMateria"
+            android:exported="true"
+            android:theme="@style/Theme.FinalPomalima.NoActionBar"/>
+        <activity
+            android:name=".IngresarLista"
+            android:exported="true"
+            android:theme="@style/Theme.FinalPomalima.NoActionBar"/>
+        <activity
+            android:name=".RegistroMateria"
+            android:exported="true"
+            android:theme="@style/Theme.FinalPomalima.NoActionBar"/>
+        <activity
+            android:name=".Logindoc"
+            android:exported="true"
+            android:theme="@style/Theme.FinalPomalima.NoActionBar"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FinalPomalima.NoActionBar"/>
     </application>
 
 </manifest>

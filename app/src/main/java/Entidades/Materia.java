@@ -2,33 +2,23 @@ package Entidades;
 
 public class Materia {
 
-    private String id;
-    private String regmateria;
+    private String nombre_materia;
     private String nrc;
 
     public Materia() {
     }
 
-    public Materia(String id, String regmateria, String nrc) {
-        this.id = id;
-        this.regmateria = regmateria;
+    public Materia(String nombre_materia, String nrc) {
+        this.nombre_materia = nombre_materia;
         this.nrc = nrc;
     }
 
-    public String getId() {
-        return id;
+    public String getNombre_materia() {
+        return nombre_materia;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getRegmateria() {
-        return regmateria;
-    }
-
-    public void setRegmateria(String regmateria) {
-        this.regmateria = regmateria;
+    public void setNombre_materia(String nombre_materia) {
+        this.nombre_materia = nombre_materia;
     }
 
     public String getNrc() {
@@ -42,8 +32,7 @@ public class Materia {
     @Override
     public String toString() {
         return "Materia{" +
-                "id='" + id + '\'' +
-                ", regmateria='" + regmateria + '\'' +
+                "nombre_materia='" + nombre_materia + '\'' +
                 ", nrc='" + nrc + '\'' +
                 '}';
     }
