@@ -103,7 +103,7 @@ public class ListaEstudiante extends AppCompatActivity {
 
             @Override
             public void onCancelled( DatabaseError error) {
-
+                Toast.makeText(ListaEstudiante.this, error.toString(), Toast.LENGTH_SHORT).show();
             }
         });
 

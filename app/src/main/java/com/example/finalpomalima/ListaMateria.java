@@ -29,27 +29,17 @@ import Entidades.Alumno;
 import Entidades.Materia;
 
 public class ListaMateria extends AppCompatActivity {
-
-<<<<<<< Updated upstream
-    Button btnVolverListMateria;
-=======
     Button btnVolver_ListMateria;
     RecyclerView RecyclerView_ListMateria;
 
     private DatabaseReference mDatabase;
     ArrayList<Materia> list_materias;
     ProgressDialog progressDialog;
->>>>>>> Stashed changes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_materia);
-
-<<<<<<< Updated upstream
-        btnVolverListMateria = findViewById(R.id.btnVolver_ListMateria);
-        btnVolverListMateria.setOnClickListener(new View.OnClickListener() {
-=======
         btnVolver_ListMateria = findViewById(R.id.btnVolver_ListMateria);
         RecyclerView_ListMateria = findViewById(R.id.RecyclerView_ListMateria);
 
@@ -112,12 +102,11 @@ public class ListaMateria extends AppCompatActivity {
 
          @Override
          public void onCancelled( DatabaseError error) {
-
+             Toast.makeText(ListaMateria.this, error.toString(), Toast.LENGTH_SHORT).show();
          }
         });
 
         btnVolver_ListMateria.setOnClickListener(new View.OnClickListener() {
->>>>>>> Stashed changes
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(ListaMateria.this, MainActivity.class);
