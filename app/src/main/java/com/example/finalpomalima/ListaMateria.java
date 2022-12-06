@@ -16,7 +16,7 @@ public class ListaMateria extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_materia);
 
-        btnVolverListMateria = findViewById(R.id.btnVolver_ListMateria);
+        btnVolverListMateria = findViewById(R.id.btnVolverListMateria);
         btnVolverListMateria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

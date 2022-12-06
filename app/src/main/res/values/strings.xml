@@ -51,4 +51,6 @@
     <string name="permiso_accedido">Permisos accedido</string>
     <string name="permiso_no_accedido">Permiso NO ACCEDIDO!</string>
 
+    <string name="elegir_archivo">Elije un archivo!</string>
+
 </resources>
