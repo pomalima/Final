@@ -93,8 +93,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:inputType="number"
-            ></EditText>
+            android:inputType="numberDecimal"
+            android:text="00.00"
+            android:maxLength="5"/>
 
 
         <TextView
@@ -110,7 +111,8 @@
             android:id="@+id/edtObservacion_Nota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"></EditText>
+            android:layout_margin="20dp"
+            android:inputType="textMultiLine"/>
 
         <LinearLayout
             android:layout_width="match_parent"

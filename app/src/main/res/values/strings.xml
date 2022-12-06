@@ -46,7 +46,7 @@
     <string name="invalid_email">Ingrese email valido</string>
     <string name="invalid_pass">Ingrese el password mayor a 6 digitos</string>
 
-    <string name="rellene_los_campos">Rellene los campos</string>
+    <string name="rellene_los_campos">Rellene todos los campos</string>
     <string name="registro_exitoso">Registro Exito</string>
     <string name="existe_nrc">Ya existe el NRC</string>
 
@@ -55,5 +55,8 @@
 
     <string name="elegir_archivo">Elije un archivo!</string>
     <string name="sin_materias">No tiene Materias Registradas!</string>
+
+    <string name="rango_nota">Ingrese una nota entre 0 y 20</string>
+    <string name="nota_registrada">Nota Registrada!</string>
 
 </resources>

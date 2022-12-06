@@ -170,7 +170,6 @@ public class IngresarLista extends AppCompatActivity {
                 while (cellIterator.hasNext()) {
                     HSSFCell cell = (HSSFCell) cellIterator.next();
 
-//                    datos = datos+" - "+cell.toString();
                     if(i==0){
 
                         String dni_entero="";
@@ -199,11 +198,9 @@ public class IngresarLista extends AppCompatActivity {
                 if(excepcion_primera_fila) list_alumnos.add(item_alumno);
                 excepcion_primera_fila = true;
                 datos = datos+"\n";
-//                archivo_IngList.setText(item_alumno.getDni().toString());
             }
 
             archivo_IngList.setText(datos);
-//            archivo_IngList.setText(list_alumnos.toString());
 
         } catch (Exception e) {
                 e.printStackTrace();

@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -104,6 +105,15 @@ public class ListaEstudiante extends AppCompatActivity {
             @Override
             public void onCancelled( DatabaseError error) {
                 Toast.makeText(ListaEstudiante.this, error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnVolver_ListaEst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ListaEstudiante.this, ListaMateria.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
             }
         });
 
