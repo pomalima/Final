@@ -17,6 +17,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.DocumentsContract;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -76,8 +77,10 @@ public class IngresarLista extends AppCompatActivity {
 
         btnSubirLista_IngList = findViewById(R.id.btnSubirLista_IngList);
         archivo_IngList = findViewById(R.id.archivo_IngList);
+        archivo_IngList.setMovementMethod(new ScrollingMovementMethod());
         btnGuardarSuLista_IngList = findViewById(R.id.btnGuardarSuLista_IngList);
         btnCancelarSuLista_IngList = findViewById(R.id.btnCancelarSuLista_IngList);
+
 
         //Para a la conexión
         FirebaseApp.initializeApp(this);
