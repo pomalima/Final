@@ -14,5 +14,7 @@
     <string name="txtNotas">NOTA - MOTIVO</string>
     <string name="btnVolver">VOLVER</string>
 
+    <string name="sin_materias">No está registrado en alguna materia!</string>
+
 
 </resources>
