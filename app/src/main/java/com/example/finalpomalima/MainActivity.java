@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                Toast.makeText(MainActivity.this,"Sesion Cerrada!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,getText(R.string.sesion_cerrada), Toast.LENGTH_SHORT).show();
                 gologing();
             }
         });

@@ -36,7 +36,7 @@
             />
 
         <Button
-            android:id="@+id/btnSubirLista"
+            android:id="@+id/btnSubirLista_IngList"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -44,21 +44,18 @@
             android:background="@drawable/btnredondear"
             android:text="@string/btnArchivo"
             android:textSize="20sp"
-            android:textStyle="bold"
-
-            />
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/archivo"
+            android:id="@+id/archivo_IngList"
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:layout_marginTop="25dp"
             android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            />
+            android:layout_marginRight="25dp" />
 
         <Button
-            android:id="@+id/btnGuardarSuLista"
+            android:id="@+id/btnGuardarSuLista_IngList"
             android:layout_width="161dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -69,7 +66,7 @@
             app:cornerRadius="20dp" />
 
         <Button
-            android:id="@+id/btnCancelarSuLista"
+            android:id="@+id/btnCancelarSuLista_IngList"
             android:layout_width="161dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

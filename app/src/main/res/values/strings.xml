@@ -17,6 +17,7 @@
     <string name="nrc">NRC: </string>
 
     <string name="registrar">REGISTRAR</string>
+    <string name="continuar">CONTINUAR</string>
     <string name="cancelar">CANCELAR</string>
 
     <string name="txtsubir">SUBIR LISTA</string>
@@ -38,13 +39,16 @@
     <string name="cerrar">CERRAR SESION</string>
     <string name="txtObservacion">OBSERVACIÓN:</string>
 
+    <string name="sesion_cerrada">Sesion Cerrada!</string>
+
     <string name="invalid_email">Ingrese email valido</string>
     <string name="invalid_pass">Ingrese el password mayor a 6 digitos</string>
 
-
-    //REGISTRO TIENDA
     <string name="rellene_los_campos">Rellene los campos</string>
     <string name="registro_exitoso">Registro Exito</string>
     <string name="existe_nrc">Ya existe el NRC</string>
+
+    <string name="permiso_accedido">Permisos accedido</string>
+    <string name="permiso_no_accedido">Permiso NO ACCEDIDO!</string>
 
 </resources>

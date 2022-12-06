@@ -48,7 +48,7 @@ public class RegistroMateria extends AppCompatActivity {
         btnRegistrarMat_RegMat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(edtRegMateria_RegMat.getText().toString().equals("") && edtRegNrc_RegMat.getText().toString().equals("")){
+                if(edtRegMateria_RegMat.getText().toString().equals("") || edtRegNrc_RegMat.getText().toString().equals("")){
                     Toast.makeText(RegistroMateria.this, getText(R.string.rellene_los_campos), Toast.LENGTH_SHORT).show();
                 }
                 else{
@@ -61,6 +61,7 @@ public class RegistroMateria extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(RegistroMateria.this, MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
             }
         });
@@ -70,6 +71,7 @@ public class RegistroMateria extends AppCompatActivity {
 
         final boolean[] val = {false};
         SharedPreferences preferencias = getSharedPreferences("Global", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferencias.edit();
         String correo = preferencias.getString("CodigoDocente", "");
         Materia materia = new Materia();
         String nom_materia = edtRegMateria_RegMat.getText().toString();
@@ -88,8 +90,9 @@ public class RegistroMateria extends AppCompatActivity {
                 String validacion_exist = dataSnapshot.child("nombre_materia").getValue(String.class);
                 if(validacion_exist == null){
                     val[0] = true;
-                    mDatabase.child(correo).child(nrc).setValue(materia);
-                    Toast.makeText(RegistroMateria.this, getText(R.string.registro_exitoso), Toast.LENGTH_SHORT).show();
+                    editor.putString("nrc", nrc);
+                    editor.putString("nombre_materia", materia.getNombre_materia());
+                    editor.commit();
 
                     Intent i = new Intent(RegistroMateria.this, IngresarLista.class);
                     startActivity(i);

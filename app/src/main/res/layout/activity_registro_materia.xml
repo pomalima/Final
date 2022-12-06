@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#23C0CD"
-                android:text="@string/registrar"
+                android:text="@string/continuar"
                 android:textSize="15sp"
                 app:cornerRadius="20dp" />
 
