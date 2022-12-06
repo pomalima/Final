@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Logindoc"
+    tools:context=".Nota"
     android:background="@color/black">
 
     <ImageView
@@ -45,6 +45,7 @@
             />
 
         <EditText
+            android:id="@+id/edtNota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"></EditText>
@@ -59,6 +60,7 @@
             android:textStyle="bold"/>
 
         <EditText
+            android:id="@+id/edtObservacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"></EditText>

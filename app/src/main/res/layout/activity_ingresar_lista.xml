@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Logindoc"
+    tools:context=".IngresarLista"
     android:background="@color/black">
 
     <ImageView
@@ -36,7 +36,7 @@
             />
 
         <Button
-            android:id="@+id/btnSubir"
+            android:id="@+id/btnSubirLista"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"

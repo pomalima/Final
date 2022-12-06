@@ -6,11 +6,13 @@
     <string name="estudiante">"¡BIENVENIDO ESTUDIANTE!</string>
 
     <string name="inicio1">INICIO DE SESIÓN ESTUDIANTE</string>
-    <string name="usuario1">NOMBRE DE USUARIO:</string>
+    <string name="usuario1">CODIGO DEL ALUMNO:</string>
     <string name="contra1">CONTRASEÑA:</string>
     <string name="btnIniEst">INICIAR SESIÓN</string>
 
     <string name="txtMaterias">MATERIAS</string>
     <string name="txtNotas">NOTA - MOTIVO</string>
+    <string name="btnVolver">VOLVER</string>
+
 
 </resources>
