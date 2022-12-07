@@ -71,7 +71,7 @@ public class ListNotaMotivo extends AppCompatActivity {
                 if (dataSnapshot == null) {
                     val[0] = true;
                     progressDialog.hide();
-                    Toast.makeText(ListNotaMotivo.this, getText(R.string.sin_materias), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ListNotaMotivo.this, getText(R.string.sin_notas), Toast.LENGTH_SHORT).show();
 
                 } else {
 
