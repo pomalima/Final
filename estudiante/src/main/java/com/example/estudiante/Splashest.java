@@ -1,6 +1,8 @@
 package com.example.estudiante;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -30,8 +32,17 @@ public class Splashest extends AppCompatActivity {
     }
 
     public void llamar_main(View view){
-        Intent i = new Intent(Splashest.this, Loginest.class);
-        startActivity(i);
+        SharedPreferences preferencias = getSharedPreferences("Global_Estudiante", Context.MODE_PRIVATE);
+
+        if(preferencias.contains("ALUM_dni")){
+            Intent i = new Intent(Splashest.this, MainActivity.class);
+            startActivity(i);
+        }
+        else{
+            Intent i = new Intent(Splashest.this, Loginest.class);
+            startActivity(i);
+        }
+
     }
 
 }

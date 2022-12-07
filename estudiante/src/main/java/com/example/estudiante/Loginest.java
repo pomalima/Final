@@ -37,6 +37,10 @@ public class Loginest extends AppCompatActivity {
         edtPassEst = findViewById(R.id.edtPassEst);
         btnEstudiante = findViewById(R.id.btnEstudiante);
 
+        SharedPreferences preferencias = getSharedPreferences("Global_Estudiante", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferencias.edit();
+        editor.clear().commit();
+
         //Para a la conexión
         FirebaseApp.initializeApp(this);
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -52,7 +56,7 @@ public class Loginest extends AppCompatActivity {
                 }
                 else {
                     if(edtcodigoEst.getText().toString().equals(edtPassEst.getText().toString())){
-                        ConsultaEstudiante();
+                        ConsultaEstudiante(editor);
                     }
                     else{
                         Toast.makeText(Loginest.this, getText(R.string.invalid_campos), Toast.LENGTH_SHORT).show();
@@ -64,10 +68,7 @@ public class Loginest extends AppCompatActivity {
 
     }
 
-    private void ConsultaEstudiante() {
-
-        SharedPreferences preferencias = getSharedPreferences("Global_Estudiante", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferencias.edit();
+    private void ConsultaEstudiante(SharedPreferences.Editor editor) {
 
         progressDialog = new ProgressDialog(Loginest.this);
         progressDialog.setMessage("Consultando Estudiante");
