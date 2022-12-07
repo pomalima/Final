@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.show();
         final boolean[] val = {false};
 
-        Query mDatosBusqueda = mDatabase.child(dni);
+        Query mDatosBusqueda = mDatabase.child(dni).child("cursos");
         mDatosBusqueda.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

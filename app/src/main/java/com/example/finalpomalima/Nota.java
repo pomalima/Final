@@ -114,7 +114,6 @@ public class Nota extends AppCompatActivity {
 
     public void existencia_estudiante_materia(String dni, Alumno item_alumno, String nrc, Materia item_materia){
 
-        final boolean[] val = {false};
         Query mDatosBusqueda = mDatabase.child(dni);
         mDatosBusqueda.addValueEventListener(new ValueEventListener() {
             @Override
@@ -122,7 +121,6 @@ public class Nota extends AppCompatActivity {
 
                 String validacion_exist = dataSnapshot.child("dni").getValue(String.class);
                 if (validacion_exist == null) {
-                    val[0] = true;
                     mDatabase.child(dni).setValue(item_alumno);
                     mDatabase.child(dni).child("cursos").child(nrc).setValue(item_materia);
                 }
