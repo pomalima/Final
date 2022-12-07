@@ -9,6 +9,7 @@
     <string name="usuario1">CODIGO DEL ALUMNO:</string>
     <string name="contra1">CONTRASEÑA:</string>
     <string name="btnIniEst">INICIAR SESIÓN</string>
+    <string name="cerrar">CERRAR SESION</string>
 
     <string name="txtMaterias">MATERIAS</string>
     <string name="txtNotas">NOTA - MOTIVO</string>

@@ -95,6 +95,7 @@ public class Loginest extends AppCompatActivity {
                         editor.commit();
                         Intent i = new Intent(Loginest.this, MainActivity.class);
                         startActivity(i);
+                        finish();
                         progressDialog.hide();
 
                     }

@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +29,7 @@ import Entidades.Materia;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView RecyclerView_listMatEst;
+    Button btnCerrar;
 
     private DatabaseReference mDatabase;
     ArrayList<Materia> list_materias;
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         RecyclerView_listMatEst = findViewById(R.id.RecyclerView_listMatEst);
+        btnCerrar = findViewById(R.id.btnCerrar);
 
         //Para a la conexión
         FirebaseApp.initializeApp(this);
@@ -101,5 +105,18 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
             }
         });
+
+        btnCerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editor.clear().commit();
+                Intent i = new Intent(MainActivity.this, Loginest.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+                finish();
+
+            }
+        });
+
     }
 }
