@@ -101,14 +101,5 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
             }
         });
-
-//        btnVolver_ListMateria.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(ListaMateria.this, MainActivity.class);
-//                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                startActivity(i);
-//            }
-//        });
     }
 }

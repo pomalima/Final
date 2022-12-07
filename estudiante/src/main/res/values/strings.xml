@@ -19,5 +19,7 @@
     <string name="sin_matricula_materias">No tiene matrícula en alguna materia!</string>
     <string name="sin_materias">No está registrado en alguna materia!</string>
 
+    <string name="sin_notas">No tiene notas registradas!</string>
+
 
 </resources>
