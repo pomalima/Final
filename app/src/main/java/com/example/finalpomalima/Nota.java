@@ -66,7 +66,8 @@ public class Nota extends AppCompatActivity {
         item_alumno.setDni(preferencias.getString("ALUM_dni", ""));
         item_alumno.setNombre(preferencias.getString("ALUM_nombre", ""));
 
-        existencia_estudiante_materia(dni,item_alumno, nrc, item_materia);
+        existencia_estudiante(dni,item_alumno);
+        existencia_materia(dni, nrc, item_materia);
 
         btnAñadir_Nota.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,7 +113,7 @@ public class Nota extends AppCompatActivity {
 
     }
 
-    public void existencia_estudiante_materia(String dni, Alumno item_alumno, String nrc, Materia item_materia){
+    public void existencia_estudiante(String dni, Alumno item_alumno){
 
         Query mDatosBusqueda = mDatabase.child(dni);
         mDatosBusqueda.addValueEventListener(new ValueEventListener() {
@@ -122,6 +123,25 @@ public class Nota extends AppCompatActivity {
                 String validacion_exist = dataSnapshot.child("dni").getValue(String.class);
                 if (validacion_exist == null) {
                     mDatabase.child(dni).setValue(item_alumno);
+                }
+
+            }
+            @Override
+            public void onCancelled( DatabaseError error) {
+                Toast.makeText(Nota.this, error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public void existencia_materia(String dni, String nrc, Materia item_materia){
+
+        Query mDatosBusqueda = mDatabase.child(dni).child("cursos").child(nrc);
+        mDatosBusqueda.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                String validacion_exist = dataSnapshot.child("nrc").getValue(String.class);
+                if (validacion_exist == null) {
                     mDatabase.child(dni).child("cursos").child(nrc).setValue(item_materia);
                 }
 
