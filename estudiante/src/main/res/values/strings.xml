@@ -14,6 +14,9 @@
     <string name="txtNotas">NOTA - MOTIVO</string>
     <string name="btnVolver">VOLVER</string>
 
+    <string name="rellene_los_campos">Rellene todos los campos</string>
+    <string name="invalid_campos">Ingrese email y password validos</string>
+    <string name="sin_matricula_materias">No tiene matrícula en alguna materia!</string>
     <string name="sin_materias">No está registrado en alguna materia!</string>
 
 

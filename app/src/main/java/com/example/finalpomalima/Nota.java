@@ -1,7 +1,5 @@
 package com.example.finalpomalima;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -13,11 +11,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import Entidades.Alumno;
 import Entidades.Materia;
@@ -56,6 +58,16 @@ public class Nota extends AppCompatActivity {
         String nrc = preferencias.getString("ME_nrc", "");
         String dni = preferencias.getString("ALUM_dni", "");
 
+        Materia item_materia = new Materia();
+        item_materia.setNrc(nrc);
+        item_materia.setNombre_materia(preferencias.getString("ME_nombre", ""));
+
+        Alumno item_alumno = new Alumno();
+        item_alumno.setDni(preferencias.getString("ALUM_dni", ""));
+        item_alumno.setNombre(preferencias.getString("ALUM_nombre", ""));
+
+        existencia_estudiante_materia(dni,item_alumno, nrc, item_materia);
+
         btnAñadir_Nota.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,11 +86,6 @@ public class Nota extends AppCompatActivity {
 
                         mDatabase.child(correo).child(nrc).child("alumnos").child(dni).child("notas").child(item_nota.getObservacion()).setValue(item_nota);
 
-                        Materia item_materia = new Materia();
-                        item_materia.setNrc(nrc);
-                        item_materia.setNombre_materia(preferencias.getString("ME_nombre", ""));
-
-                        mDatabase.child(dni).child("cursos").child(nrc).setValue(item_materia);
                         mDatabase.child(dni).child("cursos").child(nrc).child("notas").child(item_nota.getObservacion()).setValue(item_nota);
 
                         progressDialog.hide();
@@ -103,8 +110,29 @@ public class Nota extends AppCompatActivity {
             }
         });
 
-
-
-
     }
+
+    public void existencia_estudiante_materia(String dni, Alumno item_alumno, String nrc, Materia item_materia){
+
+        final boolean[] val = {false};
+        Query mDatosBusqueda = mDatabase.child(dni);
+        mDatosBusqueda.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                String validacion_exist = dataSnapshot.child("dni").getValue(String.class);
+                if (validacion_exist == null) {
+                    val[0] = true;
+                    mDatabase.child(dni).setValue(item_alumno);
+                    mDatabase.child(dni).child("cursos").child(nrc).setValue(item_materia);
+                }
+
+            }
+            @Override
+            public void onCancelled( DatabaseError error) {
+                Toast.makeText(Nota.this, error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
 }

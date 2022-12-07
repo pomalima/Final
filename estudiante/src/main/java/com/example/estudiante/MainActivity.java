@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView_listMatEst.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         RecyclerView_listMatEst.setHasFixedSize(true);
 
-        SharedPreferences preferencias = getSharedPreferences("Global", Context.MODE_PRIVATE);
+        SharedPreferences preferencias = getSharedPreferences("Global_Estudiante", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferencias.edit();
         String dni = preferencias.getString("ALUM_dni", "");
 
